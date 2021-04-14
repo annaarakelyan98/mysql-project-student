@@ -15,10 +15,13 @@ public class ValidationImpl implements Validations {
 
         if (!violations.isEmpty()) {
             violations.forEach(violation -> {
-                String message = violation.getMessage();
-                System.out.println(message);
-            });
+                        String message = violation.getMessage();
+                        System.out.println(message);
+                    }
+            );
+            return false;
+        } else {
+            return true;
         }
-        return true;
     }
 }

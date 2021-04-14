@@ -46,9 +46,10 @@ public class OperationsImpl implements Operations {
             boolean valid = validations.valid(students);
 
             if (valid) {
-                System.out.println("You have presented exceptions");
-            } else { setStudentsData(students, obj);
+                setStudentsData(students, obj);
                 obj.execute();
+            } else {
+                System.out.println("You have presented exceptions");
             }
 
         } catch (SQLException sqlException) {
